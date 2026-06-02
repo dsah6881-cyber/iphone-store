@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="description" content="New iPhone 17, iPhone 17 Pro, iPhone 17 Pro Max, iPhone 18, iPhone 18 Pro price and buy information.">
+  <meta name="keywords" content="new iphone, iphone 17, iphone 17 pro, iphone 18, iphone price, buy iphone">
+  <meta name="author" content="dsah6881-cyber"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New iPhone Price - iPhone 17 and iPhone 18</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="search-box">
+    <input type="search" placeholder="search here...">
+    <button>search</button>
+  </div>
+
+  <div class="product">
+    <h2>iphone17</h2>
+    <img src="ip.jpeg">
+    <h3>iphone 17<br>RM 5000</h3>
+    <button onclick="openCOD('iphone 17 - RM 5000')">Buy</button>
+  </div>
+
+  <div class="product">
+    <h2>iphone17pro</h2>
+    <img src="17pro.jpeg">
+    <h3>iphone 17pro<br>RM 5500</h3>
+    <button onclick="openCOD('iphone 17pro - RM 5500')">Buy</button>
+  </div>
+
+  <div class="product">
+    <h2>iphone17promax</h2>
+    <img src="17promax.jpeg">
+    <h3>iphone 17pro max<br>RM 6000</h3>
+    <button onclick="openCOD('iphone 17pro max - RM 6000')">Buy</button>
+  </div>
+
+  <div class="product">
+    <h2>iphone18</h2>
+    <img src="ip18.jpeg">
+    <h3>iphone 18<br>RM 6000</h3>
+    <button onclick="openCOD('iphone 18 - RM 6000')">Buy</button>
+  </div>
+
+  <div class="product">
+    <h2>iphone18pro</h2>
+    <img src="18pro.jpeg">
+    <h3>iphone 18pro<br>RM 6000</h3>
+    <button onclick="openCOD('iphone 18pro - RM 6000')">Buy</button>
+  </div>
+
+  <div class="product">
+    <h2>iphone18promax</h2>
+    <img src="18pro_max.jpg">
+    <h3>iphone 18pro max<br>RM 6000</h3>
+    <button onclick="openCOD('iphone 18pro max - RM 6000')">Buy</button>
+  </div>
+
+  <div id="codBox" class="cod-box">
+    <div class="cod-content">
+      <span class="close" onclick="closeCOD()">×</span>
+      <h2>Cash On Delivery</h2>
+
+      <input id="productName" readonly>
+      <input id="customerName" placeholder="Your Name">
+      <input id="customerPhone" placeholder="Phone Number">
+      <textarea id="customerAddress" placeholder="Full Address"></textarea>
+
+      <button onclick="placeOrder()">Place COD Order</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Customer support ☎️</p>
+    <p>Contact Us ☎️</p>
+    <a href="tel:+601128248262">Call Me Now +601128248262</a>
+  </footer>
+
+<script>
+function openCOD(product){
+  document.getElementById("codBox").style.display = "flex";
+  document.getElementById("productName").value = product;
+}
+
+function closeCOD(){
+  document.getElementById("codBox").style.display = "none";
+}
+
+function placeOrder(){
+  let product = document.getElementById("productName").value;
+  let name = document.getElementById("customerName").value;
+  let phone = document.getElementById("customerPhone").value;
+  let address = document.getElementById("customerAddress").value;
+
+  if(name=="" || phone=="" || address==""){
+    alert("Please fill all details");
+    return;
+  }
+
+  alert("COD Order Placed Successfully!");
+  closeCOD();
+}
+</script>
+
+</body>
+</html>
